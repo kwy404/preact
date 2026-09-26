@@ -488,7 +488,7 @@ export function commitRoot(commitQueue, root, refQueue) {
 }
 
 function cloneNode(node) {
-	if (typeof node != 'object' || node == NULL || node._depth) {
+	if (typeof node != 'object' || !node || node._depth) {
 		return node;
 	}
 

@@ -14,7 +14,7 @@ export function useTransition() {
 
 // TODO: in theory this should be done after a VNode is diffed as we want to insert
 // styles/... before it attaches
-export const useInsertionEffect = useLayoutEffect;
+export { useLayoutEffect as useInsertionEffect };
 
 /**
  * @template {Function} T
