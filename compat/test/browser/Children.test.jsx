@@ -41,6 +41,14 @@ describe('Children', () => {
 			);
 			expect(count).to.equal(2);
 		});
+
+		it('should count 0 and an empty string as children', () => {
+			render(<Foo>{0}</Foo>, scratch);
+			expect(count).to.equal(1);
+
+			render(<Foo>{''}</Foo>, scratch);
+			expect(count).to.equal(1);
+		});
 	});
 
 	describe('.only', () => {
